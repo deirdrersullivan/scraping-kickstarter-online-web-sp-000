@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require "nokogiri"
 
 def create_project_hash
@@ -15,3 +16,18 @@ def create_project_hash
   end
   projects
 end
+=======
+require 'nokogiri'
+require "pry"
+
+def create_project_hash
+  html = File.read ('fixtures/kickstarter.html')
+  kickstarter = Nokogiri::HTML(html)
+  binding.pry
+  # projects: kickstarter.css("li.project.grid_4")
+  
+end
+
+create_project_hash
+
+>>>>>>> 5b49b2a9dc33c702b79430bcf4f36998a2f64369
